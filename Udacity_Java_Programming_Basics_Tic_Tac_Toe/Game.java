@@ -127,12 +127,12 @@ public class Game {
                 ai_j = (int) (Math.random() * 3);
             } while (grid[ai_i][ai_j] != '-'); //keep trying if this spot was taken
             //update grid with new play, computer is always o
-            turn='o';
+            turn='o'; //my change
             grid[ai_i][ai_j] = 'o';
             //update free spots
             freeSpots--;
             doChecks();
-            turn='x'; //changes player's turn to x (mouseClicked method for the player's turn does not switch turn back)
+            turn='x'; //my change; changes player's turn to x (mouseClicked method for the player's turn does not switch turn back)
         } else {
             //change turns
             if (turn == 'x') {
@@ -156,7 +156,7 @@ public class Game {
      */
     public String checkGameWinner(char[][] grid) {
         String result = "None";
-
+        //my code in this method
         if (freeSpots <= 4) { //only checks for a winner if there are at least 5 plays on the grid
             if (grid[0][0] == turn && (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2])) { //checks downwards diagonal
                 result = Character.toUpperCase(turn) + " wins";
