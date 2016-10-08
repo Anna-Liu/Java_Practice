@@ -2,6 +2,7 @@
 
 Code for checking for a winner. I only added code/modified the Game.java file. The GameUI.java file is included to understand the code.
 
+My addition:
 ```
 public String checkGameWinner(char[][] grid) {
         String result = "None";
